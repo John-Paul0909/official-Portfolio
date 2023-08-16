@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>My Portfolio</title>
+      <link rel="stylesheet" href="style.css" />
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <style>
+         
+         .container {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         }
+         .details {
+         flex: 1;
+         }
+         .myself {
+         max-width: 100%;
+         }
+      </style>
+   </head>
+   <body>
+      <header class="header">
+         <div class="logo">P<span>aul</span></div>
+         <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+         </nav>
+      </header>
+      <main>
+        <div class="home">
+         <div  class="hero_container">
+            <div class="hero_left">
+               <h1>Hello! <span>I'm</span> John Paul</h1>
+               <p>I aspire to become a professional frontend developer<br>
+                   and immerse myself in the dynamic world of the industry. </p>
+               <h2>Contact me on:</h2>
+               <div class="hero_soc">
+                  <a href="https://www.facebook.com/profile.php?id=100008474779228"target="_blank"><i class='bx bxl-facebook' ></i></a>
+                  <a href="https://www.instagram.com/jhnplbdns/"target="_blank"><i class='bx bxl-instagram' ></i></a>
+                  <a href="mailto:jolo.badinas.up@phinmaed.com"target="_blank"><i class='bx bxl-gmail'></i></a>
+                </div>
+            </div>
+            <div class="hero_right">
+               <img src="images/me.jpg" alt="">
+            </div>
+         </div>
+        
+         <div id="about">
+            <div class="container">
+               <div class="row">
+
+                  <div class="about-col-2">
+                     <h1 class="sub-title">About Me</h1>
+                     <p>I am John Paul Badinas, dedicated to becoming a professional software developer. I'm 20 years old and I live in Pantal West, Dagupan City, Pangasinan.
+                     </p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="education">
+                        <ul>
+                           <li><span>Currently 3rd year college</span><p> University of Pangasinan</li>
+                           <li><span>Senior High-School</span><p>Dagupan City National High School</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                           <li><span>App Development</span><p> flutter</li>
+                           <li><span>UI?UX</span><p>Designing Web/App Interfaces</li>
+                           <li><span>Web Development</span><p>Html and css</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="hobbies">
+                        <ul>
+                           <li><span>DANCING</span></li>
+                           <li><span>PLAYING ONLINE GAMES</span></li>
+                           <li><span>MAKING APPLICATION PROJECTS</span></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="projects">
+         <div class="projects_container">
+            <div class="projects_right">
+               <img src="images/PHiGuiz.jpg" alt="">
+            </div>
+
+            <div class="projects_left">
+               <h1>Project</h1>
+               <h2>Previous Team Project:<span> PHiGuiz</span></h2>
+                  <p>PHiGuiz is a Philippine History Game Quiz, a mobile application
+               <br>that helps the users to add their knowledge about in the 
+            <br>Philippines</p>
+
+            </div>
+
+         </div>
+         </div>
+      </div>
+
+
+       
+              
+              
+       
+      </main>
+      <script>
+         var tablinks = document.getElementsByClassName("tab-links");
+         var tabcontents = document.getElementsByClassName("tab-contents");
+         
+         function opentab(tabname){
+           for(tablink of tablinks){
+             tablink.classList.remove("active-link");
+           }
+           for(tabcontent of tabcontents){
+               tabcontent.classList.remove("active-tab");
+           }
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab");
+         }
+         
+         
+      </script>
+
+<script src="main.js"></script>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  
+  const homeButton = document.querySelector('a[href="#home"]');
+  homeButton.addEventListener('click', function (event) {
+    event.preventDefault(); 
+    scrollToTop();
+  });
+</script>
+
+   </body>
+</html>
