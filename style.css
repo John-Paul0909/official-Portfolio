@@ -322,6 +322,16 @@
   .hero_soc a:hover::before {
     width: 100%;
   }
+
+  .footer{
+    padding: 40px 0;
+    background-color: #424242;
+  }
+  .copyright p{
+    text-align: center;
+    color: #242323;
+    font-size: 1rem;
+  }
   
   
   @keyframes slideRight {
